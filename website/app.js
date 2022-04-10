@@ -17,8 +17,9 @@ generateElement.addEventListener("click", (event)=>{
     // Get Wheather Data
     const zipElement   = document.getElementById("zip");
     const zipcode      = zipElement.value.trim();
-    const url          = baseURL + zipcode + apiKey;
-    getWeatherInfo(url) //← This returns Promise!
+    if (zipcode !== ''){
+        const url          = baseURL + zipcode + apiKey;
+        getWeatherInfo(url) //← This returns Promise!
         .then((weatherData)=>{
             const response = postData('/post', data={
                 temp: weatherData.main.temp,
@@ -29,6 +30,10 @@ generateElement.addEventListener("click", (event)=>{
             }).catch((error)=>{
                 console.log(error);
             });
+    }else{
+        alert("You need to put your zip code!")
+    }
+    
         });
 
 /*                  */
