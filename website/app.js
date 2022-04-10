@@ -5,7 +5,7 @@ const baseURL    = "http://api.openweathermap.org/data/2.5/weather?zip="
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+1 +'.'+ d.getDate()+'.'+ d.getFullYear();
 
 // "http://api.openweathermap.org/data/2.5/weather?zip=166-0012,JP&APPID=d5fe94d6a3ea6b6749240e38bf650ca6&units=imperial"
 
