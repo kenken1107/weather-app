@@ -85,19 +85,3 @@ const updateUI = async () => {
         // appropriately handle the error
     }
 };
-
-// const updateUI = async() => {
-//     const request = await fetch('/all');
-//     try {
-//         const allData = await request.json();
-//         console.log(allData);
-//         // update new entry values
-//         if (allData.date !== undefined && allData.temp !== undefined && allData.content !== undefined) {
-//             document.getElementById('date').innerHTML = allData.date;
-//             document.getElementById('temp').innerHTML = allData.temp + ' degree C';
-//             document.getElementById('content').innerHTML = allData.content;
-//         }
-//     } catch (error) {
-//         console.log('error', error);
-//     }
-// };
